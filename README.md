@@ -1,6 +1,6 @@
 # World Happiness Index — India (2005–2024)
 
-A compact, reproducible analysis and visualization project that collects and visualizes India's World Happiness data across 2005–2024. The repository contains the processed data, plotting scripts (Plotly), and generated plots comparing India's happiness score and global rank over time.
+A analysis and visualization project that collects and visualizes India's World Happiness data across 2005–2024. The repository contains the processed data, plotting scripts (Plotly), and generated plots comparing India's happiness score and global rank over time.
 
 ## Contents
 
@@ -67,23 +67,3 @@ python script.py            # prints the assembled DataFrame summary
 
 3. Outputs are saved in the repository root (PNG/SVG) and some additional plots are stored in `plots/`.
 
-## Notes, assumptions and data quality
-
-- Some years (2005–2010 and select other years) have missing values in `india_happiness_2005_2024.csv`. The scripts handle the available years explicitly in their in-script data arrays.
-- The project mixes hand-assembled data inside scripts (see `chart_script.py` and `script.py`) with the CSV dataset. Consider centralizing data-loading into a single module or notebook for easier reproducibility.
-
-## Next steps / Improvements (suggested)
-
-1. Add a `requirements.txt` file and optionally a `pyproject.toml` or `environment.yml` for reproducible environments.
-2. Move hard-coded data from scripts into a data-loading function that reads `india_happiness_2005_2024.csv` (makes the code data-driven).
-3. Add a short example notebook (`example.ipynb`) that walks through loading the CSV, plotting, and reproducing the charts interactively.
-4. Add unit tests or a small smoke test script that imports the plotting functions and checks they run without errors (useful for CI).
-
----
-
-If you'd like, I can also:
-- create a `requirements.txt` with pinned versions,
-- refactor the scripts to load data from the CSV, and
-- add a small runner script that regenerates all plots into `plots/`.
-
-Update summary: README expanded to include description, file list, usage and next steps.
